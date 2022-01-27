@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:tabs_with_freezed/tab_bar_item.dart';
+import 'package:tabs_with_freezed/model/tab_bar_item.dart';
 
-part 'home_view_model.freezed.dart';
+part './home_view_model.freezed.dart';
 
 @freezed
 class HomeViewModel with _$HomeViewModel {

@@ -18,16 +18,22 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$HomeViewModelTearOff {
   const _$HomeViewModelTearOff();
 
-  _Walk walk() {
-    return const _Walk();
+  _Walk walk(TabBarItem item) {
+    return _Walk(
+      item,
+    );
   }
 
-  _Train train() {
-    return const _Train();
+  _Train train(TabBarItem item) {
+    return _Train(
+      item,
+    );
   }
 
-  _Car car() {
-    return const _Car();
+  _Car car(TabBarItem item) {
+    return _Car(
+      item,
+    );
   }
 }
 
@@ -36,25 +42,27 @@ const $HomeViewModel = _$HomeViewModelTearOff();
 
 /// @nodoc
 mixin _$HomeViewModel {
+  TabBarItem get item => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() walk,
-    required TResult Function() train,
-    required TResult Function() car,
+    required TResult Function(TabBarItem item) walk,
+    required TResult Function(TabBarItem item) train,
+    required TResult Function(TabBarItem item) car,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,6 +88,10 @@ mixin _$HomeViewModel {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $HomeViewModelCopyWith<HomeViewModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -87,6 +99,7 @@ abstract class $HomeViewModelCopyWith<$Res> {
   factory $HomeViewModelCopyWith(
           HomeViewModel value, $Res Function(HomeViewModel) then) =
       _$HomeViewModelCopyWithImpl<$Res>;
+  $Res call({TabBarItem item});
 }
 
 /// @nodoc
@@ -97,12 +110,26 @@ class _$HomeViewModelCopyWithImpl<$Res>
   final HomeViewModel _value;
   // ignore: unused_field
   final $Res Function(HomeViewModel) _then;
+
+  @override
+  $Res call({
+    Object? item = freezed,
+  }) {
+    return _then(_value.copyWith(
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as TabBarItem,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$WalkCopyWith<$Res> {
+abstract class _$WalkCopyWith<$Res> implements $HomeViewModelCopyWith<$Res> {
   factory _$WalkCopyWith(_Walk value, $Res Function(_Walk) then) =
       __$WalkCopyWithImpl<$Res>;
+  @override
+  $Res call({TabBarItem item});
 }
 
 /// @nodoc
@@ -113,57 +140,80 @@ class __$WalkCopyWithImpl<$Res> extends _$HomeViewModelCopyWithImpl<$Res>
 
   @override
   _Walk get _value => super._value as _Walk;
+
+  @override
+  $Res call({
+    Object? item = freezed,
+  }) {
+    return _then(_Walk(
+      item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as TabBarItem,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Walk implements _Walk {
-  const _$_Walk();
+  const _$_Walk(this.item);
+
+  @override
+  final TabBarItem item;
 
   @override
   String toString() {
-    return 'HomeViewModel.walk()';
+    return 'HomeViewModel.walk(item: $item)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Walk);
+        (other.runtimeType == runtimeType &&
+            other is _Walk &&
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(item));
+
+  @JsonKey(ignore: true)
+  @override
+  _$WalkCopyWith<_Walk> get copyWith =>
+      __$WalkCopyWithImpl<_Walk>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() walk,
-    required TResult Function() train,
-    required TResult Function() car,
+    required TResult Function(TabBarItem item) walk,
+    required TResult Function(TabBarItem item) train,
+    required TResult Function(TabBarItem item) car,
   }) {
-    return walk();
+    return walk(item);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
   }) {
-    return walk?.call();
+    return walk?.call(item);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
     required TResult orElse(),
   }) {
     if (walk != null) {
-      return walk();
+      return walk(item);
     }
     return orElse();
   }
@@ -204,13 +254,21 @@ class _$_Walk implements _Walk {
 }
 
 abstract class _Walk implements HomeViewModel {
-  const factory _Walk() = _$_Walk;
+  const factory _Walk(TabBarItem item) = _$_Walk;
+
+  @override
+  TabBarItem get item;
+  @override
+  @JsonKey(ignore: true)
+  _$WalkCopyWith<_Walk> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$TrainCopyWith<$Res> {
+abstract class _$TrainCopyWith<$Res> implements $HomeViewModelCopyWith<$Res> {
   factory _$TrainCopyWith(_Train value, $Res Function(_Train) then) =
       __$TrainCopyWithImpl<$Res>;
+  @override
+  $Res call({TabBarItem item});
 }
 
 /// @nodoc
@@ -221,57 +279,80 @@ class __$TrainCopyWithImpl<$Res> extends _$HomeViewModelCopyWithImpl<$Res>
 
   @override
   _Train get _value => super._value as _Train;
+
+  @override
+  $Res call({
+    Object? item = freezed,
+  }) {
+    return _then(_Train(
+      item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as TabBarItem,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Train implements _Train {
-  const _$_Train();
+  const _$_Train(this.item);
+
+  @override
+  final TabBarItem item;
 
   @override
   String toString() {
-    return 'HomeViewModel.train()';
+    return 'HomeViewModel.train(item: $item)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Train);
+        (other.runtimeType == runtimeType &&
+            other is _Train &&
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(item));
+
+  @JsonKey(ignore: true)
+  @override
+  _$TrainCopyWith<_Train> get copyWith =>
+      __$TrainCopyWithImpl<_Train>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() walk,
-    required TResult Function() train,
-    required TResult Function() car,
+    required TResult Function(TabBarItem item) walk,
+    required TResult Function(TabBarItem item) train,
+    required TResult Function(TabBarItem item) car,
   }) {
-    return train();
+    return train(item);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
   }) {
-    return train?.call();
+    return train?.call(item);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
     required TResult orElse(),
   }) {
     if (train != null) {
-      return train();
+      return train(item);
     }
     return orElse();
   }
@@ -312,13 +393,21 @@ class _$_Train implements _Train {
 }
 
 abstract class _Train implements HomeViewModel {
-  const factory _Train() = _$_Train;
+  const factory _Train(TabBarItem item) = _$_Train;
+
+  @override
+  TabBarItem get item;
+  @override
+  @JsonKey(ignore: true)
+  _$TrainCopyWith<_Train> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$CarCopyWith<$Res> {
+abstract class _$CarCopyWith<$Res> implements $HomeViewModelCopyWith<$Res> {
   factory _$CarCopyWith(_Car value, $Res Function(_Car) then) =
       __$CarCopyWithImpl<$Res>;
+  @override
+  $Res call({TabBarItem item});
 }
 
 /// @nodoc
@@ -329,57 +418,80 @@ class __$CarCopyWithImpl<$Res> extends _$HomeViewModelCopyWithImpl<$Res>
 
   @override
   _Car get _value => super._value as _Car;
+
+  @override
+  $Res call({
+    Object? item = freezed,
+  }) {
+    return _then(_Car(
+      item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as TabBarItem,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Car implements _Car {
-  const _$_Car();
+  const _$_Car(this.item);
+
+  @override
+  final TabBarItem item;
 
   @override
   String toString() {
-    return 'HomeViewModel.car()';
+    return 'HomeViewModel.car(item: $item)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Car);
+        (other.runtimeType == runtimeType &&
+            other is _Car &&
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(item));
+
+  @JsonKey(ignore: true)
+  @override
+  _$CarCopyWith<_Car> get copyWith =>
+      __$CarCopyWithImpl<_Car>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() walk,
-    required TResult Function() train,
-    required TResult Function() car,
+    required TResult Function(TabBarItem item) walk,
+    required TResult Function(TabBarItem item) train,
+    required TResult Function(TabBarItem item) car,
   }) {
-    return car();
+    return car(item);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
   }) {
-    return car?.call();
+    return car?.call(item);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? walk,
-    TResult Function()? train,
-    TResult Function()? car,
+    TResult Function(TabBarItem item)? walk,
+    TResult Function(TabBarItem item)? train,
+    TResult Function(TabBarItem item)? car,
     required TResult orElse(),
   }) {
     if (car != null) {
-      return car();
+      return car(item);
     }
     return orElse();
   }
@@ -420,5 +532,11 @@ class _$_Car implements _Car {
 }
 
 abstract class _Car implements HomeViewModel {
-  const factory _Car() = _$_Car;
+  const factory _Car(TabBarItem item) = _$_Car;
+
+  @override
+  TabBarItem get item;
+  @override
+  @JsonKey(ignore: true)
+  _$CarCopyWith<_Car> get copyWith => throw _privateConstructorUsedError;
 }

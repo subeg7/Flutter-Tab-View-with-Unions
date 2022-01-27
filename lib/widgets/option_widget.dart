@@ -13,16 +13,15 @@ class OptionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: InkWell(
-        onTap: onTap,
-        child: Container(
-          color: item.secondaryColor,
-          child: Tab(
-            icon: Icon(
-              item.icon,
-              color: item.primaryColor,
-            ),
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        // width: 20, 
+        color: item.primaryColor,
+        child: Tab(
+          icon: Icon(
+            item.icon,
+            color: item.secondaryColor,
           ),
         ),
       ),

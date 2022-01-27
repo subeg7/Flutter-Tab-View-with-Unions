@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tabs_with_freezed/helpers/tab_helper.dart';
 import 'package:tabs_with_freezed/model/tab_model.dart';
 import 'package:tabs_with_freezed/widgets/tab_container.dart';
+import 'package:tabs_with_freezed/widgets/tab_contents/tab_contents.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key, required this.title}) : super(key: key);
@@ -44,16 +45,16 @@ class _HomeViewState extends State<HomeView> {
 
   Widget _buildBody(TabModel activeHomeModel) {
     return activeHomeModel.when(
-      utensil: (_) => Text("utensil"),
-      vehicle: (_) => Text("utensil"),
-      cricket: (_) => Text("cricket"),
-      alchohol: (_) => Text("alchohol"),
-      suit: (_) => Text("suit"),
-      court: (_) => Text("court"),
-      mountain: (_) => Text("mountain"),
-      flower: (_) => Text("flower"),
-      animal: (_) => Text("flower"),
-      sky: (_) => Text("sky"),
+      utensil: (_) => const UtensilWidget(),
+      vehicle: (_) => const VehicleWidget(),
+      cricket: (_) => const CricketWidget(),
+      alchohol: (_) => const AlcoholWidget(),
+      suit: (_) => const SuitWidget(),
+      court: (_) => const CourtWidget(),
+      mountain: (_) => const MountainWidget(),
+      flower: (_) => const FlowerWidget(),
+      animal: (_) => const AnimalWidget(),
+      sky: (_) => const SkyWidget(),
     );
   }
 }

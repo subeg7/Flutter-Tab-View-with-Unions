@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tabs_with_freezed/model/tab_bar_item.dart';
+import 'package:tabs_with_freezed/model/tab_info.dart';
 
-class OptionWidget extends StatelessWidget {
-  final TabItem item;
+class TabWidget extends StatelessWidget {
+  final TabInfo item;
   final VoidCallback onTap;
 
-  const OptionWidget({
+  const TabWidget({
     Key? key,
     required this.item,
     required this.onTap,
@@ -16,7 +16,7 @@ class OptionWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 50, 
+        width: 50,
         color: item.primaryColor,
         child: Tab(
           icon: Icon(

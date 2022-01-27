@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tabs_with_freezed/model/home_view_model.dart';
-import 'package:tabs_with_freezed/widgets/option_widget.dart';
+import 'package:tabs_with_freezed/model/tab_model.dart';
+import 'package:tabs_with_freezed/widgets/tab_widget.dart';
 
 class TabContainer extends StatelessWidget {
-  final List<TabViewModel> tabs;
+  final List<TabModel> tabs;
   final Function(int) onTabPressed;
 
   const TabContainer({Key? key, required this.tabs, required this.onTabPressed})
@@ -17,7 +17,7 @@ class TabContainer extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: tabs
             .map(
-              (homeVModel) => OptionWidget(
+              (homeVModel) => TabWidget(
                 item: homeVModel.item,
                 onTap: () => onTabPressed(tabs.indexOf(homeVModel)),
               ),

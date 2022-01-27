@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TabItem {
+class TabInfo {
   String title;
   IconData icon;
   Color primaryColor;
   Color secondaryColor;
 
-  TabItem({
+  TabInfo({
     required this.title,
     required this.icon,
     required this.primaryColor,

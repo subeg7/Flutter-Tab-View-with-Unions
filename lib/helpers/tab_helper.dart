@@ -5,24 +5,24 @@ import 'package:tabs_with_freezed/model/tab_bar_item.dart';
 class TabHelper {
   // TODO :: create 15 tabs
 
-  static List<HomeViewModel> get allTabs => [
+  static List<TabViewModel> get allTabs => [
 
-        HomeViewModel.walk(
-          TabBarItem(
+        TabViewModel.walk(
+          TabItem(
             title: "Walking Direction",
             icon: Icons.directions_boat_filled,
             primaryColor: Colors.red,
           ),
         ),
-        HomeViewModel.train(
-          TabBarItem(
+        TabViewModel.train(
+          TabItem(
             title: "Train Direction",
             icon: Icons.directions_train,
             primaryColor: Colors.blue,
           ),
         ),
-        HomeViewModel.car(
-          TabBarItem(
+        TabViewModel.car(
+          TabItem(
             title: "Car Direction",
             icon: Icons.directions_car,
             primaryColor: Colors.yellow,

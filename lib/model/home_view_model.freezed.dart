@@ -18,19 +18,19 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$HomeViewModelTearOff {
   const _$HomeViewModelTearOff();
 
-  _Walk walk(TabBarItem item) {
+  _Walk walk(TabItem item) {
     return _Walk(
       item,
     );
   }
 
-  _Train train(TabBarItem item) {
+  _Train train(TabItem item) {
     return _Train(
       item,
     );
   }
 
-  _Car car(TabBarItem item) {
+  _Car car(TabItem item) {
     return _Car(
       item,
     );
@@ -42,27 +42,27 @@ const $HomeViewModel = _$HomeViewModelTearOff();
 
 /// @nodoc
 mixin _$HomeViewModel {
-  TabBarItem get item => throw _privateConstructorUsedError;
+  TabItem get item => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TabBarItem item) walk,
-    required TResult Function(TabBarItem item) train,
-    required TResult Function(TabBarItem item) car,
+    required TResult Function(TabItem item) walk,
+    required TResult Function(TabItem item) train,
+    required TResult Function(TabItem item) car,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -90,16 +90,16 @@ mixin _$HomeViewModel {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HomeViewModelCopyWith<HomeViewModel> get copyWith =>
+  $HomeViewModelCopyWith<TabViewModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HomeViewModelCopyWith<$Res> {
   factory $HomeViewModelCopyWith(
-          HomeViewModel value, $Res Function(HomeViewModel) then) =
+          TabViewModel value, $Res Function(TabViewModel) then) =
       _$HomeViewModelCopyWithImpl<$Res>;
-  $Res call({TabBarItem item});
+  $Res call({TabItem item});
 }
 
 /// @nodoc
@@ -107,9 +107,9 @@ class _$HomeViewModelCopyWithImpl<$Res>
     implements $HomeViewModelCopyWith<$Res> {
   _$HomeViewModelCopyWithImpl(this._value, this._then);
 
-  final HomeViewModel _value;
+  final TabViewModel _value;
   // ignore: unused_field
-  final $Res Function(HomeViewModel) _then;
+  final $Res Function(TabViewModel) _then;
 
   @override
   $Res call({
@@ -119,7 +119,7 @@ class _$HomeViewModelCopyWithImpl<$Res>
       item: item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as TabBarItem,
+              as TabItem,
     ));
   }
 }
@@ -129,7 +129,7 @@ abstract class _$WalkCopyWith<$Res> implements $HomeViewModelCopyWith<$Res> {
   factory _$WalkCopyWith(_Walk value, $Res Function(_Walk) then) =
       __$WalkCopyWithImpl<$Res>;
   @override
-  $Res call({TabBarItem item});
+  $Res call({TabItem item});
 }
 
 /// @nodoc
@@ -149,7 +149,7 @@ class __$WalkCopyWithImpl<$Res> extends _$HomeViewModelCopyWithImpl<$Res>
       item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as TabBarItem,
+              as TabItem,
     ));
   }
 }
@@ -160,7 +160,7 @@ class _$_Walk implements _Walk {
   const _$_Walk(this.item);
 
   @override
-  final TabBarItem item;
+  final TabItem item;
 
   @override
   String toString() {
@@ -187,9 +187,9 @@ class _$_Walk implements _Walk {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TabBarItem item) walk,
-    required TResult Function(TabBarItem item) train,
-    required TResult Function(TabBarItem item) car,
+    required TResult Function(TabItem item) walk,
+    required TResult Function(TabItem item) train,
+    required TResult Function(TabItem item) car,
   }) {
     return walk(item);
   }
@@ -197,9 +197,9 @@ class _$_Walk implements _Walk {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
   }) {
     return walk?.call(item);
   }
@@ -207,9 +207,9 @@ class _$_Walk implements _Walk {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
     required TResult orElse(),
   }) {
     if (walk != null) {
@@ -253,11 +253,11 @@ class _$_Walk implements _Walk {
   }
 }
 
-abstract class _Walk implements HomeViewModel {
-  const factory _Walk(TabBarItem item) = _$_Walk;
+abstract class _Walk implements TabViewModel {
+  const factory _Walk(TabItem item) = _$_Walk;
 
   @override
-  TabBarItem get item;
+  TabItem get item;
   @override
   @JsonKey(ignore: true)
   _$WalkCopyWith<_Walk> get copyWith => throw _privateConstructorUsedError;
@@ -268,7 +268,7 @@ abstract class _$TrainCopyWith<$Res> implements $HomeViewModelCopyWith<$Res> {
   factory _$TrainCopyWith(_Train value, $Res Function(_Train) then) =
       __$TrainCopyWithImpl<$Res>;
   @override
-  $Res call({TabBarItem item});
+  $Res call({TabItem item});
 }
 
 /// @nodoc
@@ -288,7 +288,7 @@ class __$TrainCopyWithImpl<$Res> extends _$HomeViewModelCopyWithImpl<$Res>
       item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as TabBarItem,
+              as TabItem,
     ));
   }
 }
@@ -299,7 +299,7 @@ class _$_Train implements _Train {
   const _$_Train(this.item);
 
   @override
-  final TabBarItem item;
+  final TabItem item;
 
   @override
   String toString() {
@@ -326,9 +326,9 @@ class _$_Train implements _Train {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TabBarItem item) walk,
-    required TResult Function(TabBarItem item) train,
-    required TResult Function(TabBarItem item) car,
+    required TResult Function(TabItem item) walk,
+    required TResult Function(TabItem item) train,
+    required TResult Function(TabItem item) car,
   }) {
     return train(item);
   }
@@ -336,9 +336,9 @@ class _$_Train implements _Train {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
   }) {
     return train?.call(item);
   }
@@ -346,9 +346,9 @@ class _$_Train implements _Train {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
     required TResult orElse(),
   }) {
     if (train != null) {
@@ -392,11 +392,11 @@ class _$_Train implements _Train {
   }
 }
 
-abstract class _Train implements HomeViewModel {
-  const factory _Train(TabBarItem item) = _$_Train;
+abstract class _Train implements TabViewModel {
+  const factory _Train(TabItem item) = _$_Train;
 
   @override
-  TabBarItem get item;
+  TabItem get item;
   @override
   @JsonKey(ignore: true)
   _$TrainCopyWith<_Train> get copyWith => throw _privateConstructorUsedError;
@@ -407,7 +407,7 @@ abstract class _$CarCopyWith<$Res> implements $HomeViewModelCopyWith<$Res> {
   factory _$CarCopyWith(_Car value, $Res Function(_Car) then) =
       __$CarCopyWithImpl<$Res>;
   @override
-  $Res call({TabBarItem item});
+  $Res call({TabItem item});
 }
 
 /// @nodoc
@@ -427,7 +427,7 @@ class __$CarCopyWithImpl<$Res> extends _$HomeViewModelCopyWithImpl<$Res>
       item == freezed
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
-              as TabBarItem,
+              as TabItem,
     ));
   }
 }
@@ -438,7 +438,7 @@ class _$_Car implements _Car {
   const _$_Car(this.item);
 
   @override
-  final TabBarItem item;
+  final TabItem item;
 
   @override
   String toString() {
@@ -465,9 +465,9 @@ class _$_Car implements _Car {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TabBarItem item) walk,
-    required TResult Function(TabBarItem item) train,
-    required TResult Function(TabBarItem item) car,
+    required TResult Function(TabItem item) walk,
+    required TResult Function(TabItem item) train,
+    required TResult Function(TabItem item) car,
   }) {
     return car(item);
   }
@@ -475,9 +475,9 @@ class _$_Car implements _Car {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
   }) {
     return car?.call(item);
   }
@@ -485,9 +485,9 @@ class _$_Car implements _Car {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TabBarItem item)? walk,
-    TResult Function(TabBarItem item)? train,
-    TResult Function(TabBarItem item)? car,
+    TResult Function(TabItem item)? walk,
+    TResult Function(TabItem item)? train,
+    TResult Function(TabItem item)? car,
     required TResult orElse(),
   }) {
     if (car != null) {
@@ -531,11 +531,11 @@ class _$_Car implements _Car {
   }
 }
 
-abstract class _Car implements HomeViewModel {
-  const factory _Car(TabBarItem item) = _$_Car;
+abstract class _Car implements TabViewModel {
+  const factory _Car(TabItem item) = _$_Car;
 
   @override
-  TabBarItem get item;
+  TabItem get item;
   @override
   @JsonKey(ignore: true)
   _$CarCopyWith<_Car> get copyWith => throw _privateConstructorUsedError;

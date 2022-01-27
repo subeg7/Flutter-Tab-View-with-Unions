@@ -3,7 +3,7 @@ import 'package:tabs_with_freezed/model/home_view_model.dart';
 import 'package:tabs_with_freezed/widgets/option_widget.dart';
 
 class TabContainer extends StatelessWidget {
-  final List<HomeViewModel> tabs;
+  final List<TabViewModel> tabs;
   final Function(int) onTabPressed;
 
   const TabContainer({Key? key, required this.tabs, required this.onTabPressed})
@@ -12,13 +12,15 @@ class TabContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
+      height:30,
       child: ListView(
+        scrollDirection: Axis.horizontal,
         children: tabs
             .map(
               (homeVModel) => OptionWidget(
-                  item: homeVModel.item,
-                  onTap: () => onTabPressed(tabs.indexOf(homeVModel))),
+                item: homeVModel.item,
+                onTap: () => onTabPressed(tabs.indexOf(homeVModel)),
+              ),
             )
             .toList(),
       ),

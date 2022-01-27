@@ -4,9 +4,9 @@ import 'package:tabs_with_freezed/model/tab_bar_item.dart';
 part './home_view_model.freezed.dart';
 
 @freezed
-class HomeViewModel with _$HomeViewModel {
+class TabViewModel with _$HomeViewModel {
   // TODO :: create 15 constructors
-  const factory HomeViewModel.walk(TabBarItem item) = _Walk;
-  const factory HomeViewModel.train(TabBarItem item) = _Train;
-  const factory HomeViewModel.car(TabBarItem item) = _Car;
+  const factory TabViewModel.walk(TabItem item) = _Walk;
+  const factory TabViewModel.train(TabItem item) = _Train;
+  const factory TabViewModel.car(TabItem item) = _Car;
 }

@@ -13,7 +13,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  late final List<HomeViewModel> tabs;
+  late final List<TabViewModel> tabs;
   int activeTabIndex = 0;
 
   @override
@@ -42,7 +42,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget _buildBody(HomeViewModel activeHomeModel) {
+  Widget _buildBody(TabViewModel activeHomeModel) {
     return activeHomeModel.when(
       walk: (item) => Text(item.title),
       train: (item) => Text(item.title),

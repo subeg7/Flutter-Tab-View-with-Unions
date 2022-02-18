@@ -1,77 +1,77 @@
 import 'package:flutter/material.dart';
-import 'package:tabs_with_freezed/model/tab_model.dart';
+import 'package:tabs_with_freezed/model/tab_view_model.dart';
 import 'package:tabs_with_freezed/model/tab_info.dart';
 
 class TabHelper {
-  static List<TabModel> get allTabs => [
-        TabModel.sky(
+  static List<TabViewModel> get allTabs => [
+        TabViewModel.flower(
           TabInfo(
-            title: "Sky",
-            icon: Icons.directions_boat_filled,
-            primaryColor: Colors.green,
-          ),
-        ),
-        TabModel.utensil(
-          TabInfo(
-            title: "Utensil",
-            icon: Icons.directions_train,
-            primaryColor: Colors.blue,
-          ),
-        ),
-        TabModel.animal(
-          TabInfo(
-            title: "Animal",
-            icon: Icons.directions_car,
-            primaryColor: Colors.yellow,
-          ),
-        ),
-        TabModel.alchohol(
-          TabInfo(
-            title: "Alcohol",
-            icon: Icons.directions_car,
-            primaryColor: Colors.red,
-          ),
-        ),
-        TabModel.court(
-          TabInfo(
-            title: "Court",
-            icon: Icons.directions_car,
-            primaryColor: Colors.brown,
-          ),
-        ),
-        TabModel.cricket(
-          TabInfo(
-            title: "Cricket",
-            icon: Icons.directions_car,
+            title: "Flower",
+            icon: Icons.local_florist,
             primaryColor: Colors.pink,
           ),
         ),
-        TabModel.flower(
+        TabViewModel.animal(
           TabInfo(
-            title: "Flower",
-            icon: Icons.directions_car,
-            primaryColor: Colors.grey,
+            title: "Animal",
+            icon: Icons.pets,
+            primaryColor: Colors.purple,
           ),
         ),
-        TabModel.mountain(
+        TabViewModel.mountain(
           TabInfo(
             title: "Mountain",
-            icon: Icons.directions_car,
-            primaryColor: Colors.amber,
+            icon: Icons.hiking,
+            primaryColor: Colors.indigo,
           ),
         ),
-        TabModel.suit(
+        TabViewModel.sky(
           TabInfo(
-            title: "Suit",
-            icon: Icons.directions_car,
-            primaryColor: Colors.black,
+            title: "Sky",
+            icon: Icons.cloud,
+            primaryColor: Colors.blue,
           ),
         ),
-        TabModel.vehicle(
+        TabViewModel.vehicle(
           TabInfo(
             title: "Vehicle",
-            icon: Icons.directions_car,
-            primaryColor: Colors.lightGreen,
+            icon: Icons.electric_car,
+            primaryColor: Colors.cyan,
+          ),
+        ),
+        TabViewModel.utensil(
+          TabInfo(
+            title: "Utensil",
+            icon: Icons.restaurant,
+            primaryColor: Colors.teal,
+          ),
+        ),
+        TabViewModel.alchohol(
+          TabInfo(
+            title: "Alcohol",
+            icon: Icons.liquor,
+            primaryColor: Colors.brown,
+          ),
+        ),
+        TabViewModel.cricket(
+          TabInfo(
+            title: "Cricket",
+            icon: Icons.sports_cricket,
+            primaryColor: Colors.orange,
+          ),
+        ),
+        TabViewModel.suit(
+          TabInfo(
+            title: "Suit",
+            icon: Icons.checkroom,
+            primaryColor: Colors.green,
+          ),
+        ),
+        TabViewModel.court(
+          TabInfo(
+            title: "Court",
+            icon: Icons.account_balance,
+            primaryColor: Colors.blueGrey,
           ),
         ),
       ];

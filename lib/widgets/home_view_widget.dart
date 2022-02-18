@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tabs_with_freezed/helpers/tab_helper.dart';
-import 'package:tabs_with_freezed/model/tab_model.dart';
+import 'package:tabs_with_freezed/model/tab_view_model.dart';
 import 'package:tabs_with_freezed/widgets/tab_container.dart';
 import 'package:tabs_with_freezed/widgets/tab_contents/tab_contents.dart';
 
@@ -14,7 +14,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  late final List<TabModel> tabs;
+  late final List<TabViewModel> tabs;
   int activeTabIndex = 0;
 
   @override
@@ -27,7 +27,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tabs Demo'),
+        title: const Text('Tabs With Freezed'),
       ),
       body: Column(
         children: [
@@ -43,7 +43,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget _buildBody(TabModel activeHomeModel) {
+  Widget _buildBody(TabViewModel activeHomeModel) {
     return activeHomeModel.when(
       utensil: (_) => const UtensilWidget(),
       vehicle: (_) => const VehicleWidget(),

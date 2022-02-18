@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'tab_model.dart';
+part of 'tab_view_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -174,13 +174,13 @@ mixin _$TabModel {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $TabModelCopyWith<TabModel> get copyWith =>
+  $TabModelCopyWith<TabViewModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $TabModelCopyWith<$Res> {
-  factory $TabModelCopyWith(TabModel value, $Res Function(TabModel) then) =
+  factory $TabModelCopyWith(TabViewModel value, $Res Function(TabViewModel) then) =
       _$TabModelCopyWithImpl<$Res>;
   $Res call({TabInfo item});
 }
@@ -189,9 +189,9 @@ abstract class $TabModelCopyWith<$Res> {
 class _$TabModelCopyWithImpl<$Res> implements $TabModelCopyWith<$Res> {
   _$TabModelCopyWithImpl(this._value, this._then);
 
-  final TabModel _value;
+  final TabViewModel _value;
   // ignore: unused_field
-  final $Res Function(TabModel) _then;
+  final $Res Function(TabViewModel) _then;
 
   @override
   $Res call({
@@ -377,7 +377,7 @@ class _$_Utensil implements _Utensil {
   }
 }
 
-abstract class _Utensil implements TabModel {
+abstract class _Utensil implements TabViewModel {
   const factory _Utensil(TabInfo item) = _$_Utensil;
 
   @override
@@ -559,7 +559,7 @@ class _$_Vehicle implements _Vehicle {
   }
 }
 
-abstract class _Vehicle implements TabModel {
+abstract class _Vehicle implements TabViewModel {
   const factory _Vehicle(TabInfo item) = _$_Vehicle;
 
   @override
@@ -741,7 +741,7 @@ class _$_Cricket implements _Cricket {
   }
 }
 
-abstract class _Cricket implements TabModel {
+abstract class _Cricket implements TabViewModel {
   const factory _Cricket(TabInfo item) = _$_Cricket;
 
   @override
@@ -923,7 +923,7 @@ class _$_Alcohol implements _Alcohol {
   }
 }
 
-abstract class _Alcohol implements TabModel {
+abstract class _Alcohol implements TabViewModel {
   const factory _Alcohol(TabInfo item) = _$_Alcohol;
 
   @override
@@ -1105,7 +1105,7 @@ class _$_Suit implements _Suit {
   }
 }
 
-abstract class _Suit implements TabModel {
+abstract class _Suit implements TabViewModel {
   const factory _Suit(TabInfo item) = _$_Suit;
 
   @override
@@ -1286,7 +1286,7 @@ class _$_Court implements _Court {
   }
 }
 
-abstract class _Court implements TabModel {
+abstract class _Court implements TabViewModel {
   const factory _Court(TabInfo item) = _$_Court;
 
   @override
@@ -1467,7 +1467,7 @@ class _$_Mountain implements _Mountain {
   }
 }
 
-abstract class _Mountain implements TabModel {
+abstract class _Mountain implements TabViewModel {
   const factory _Mountain(TabInfo item) = _$_Mountain;
 
   @override
@@ -1649,7 +1649,7 @@ class _$_Flower implements _Flower {
   }
 }
 
-abstract class _Flower implements TabModel {
+abstract class _Flower implements TabViewModel {
   const factory _Flower(TabInfo item) = _$_Flower;
 
   @override
@@ -1830,7 +1830,7 @@ class _$_Animal implements _Animal {
   }
 }
 
-abstract class _Animal implements TabModel {
+abstract class _Animal implements TabViewModel {
   const factory _Animal(TabInfo item) = _$_Animal;
 
   @override
@@ -2011,7 +2011,7 @@ class _$_Sky implements _Sky {
   }
 }
 
-abstract class _Sky implements TabModel {
+abstract class _Sky implements TabViewModel {
   const factory _Sky(TabInfo item) = _$_Sky;
 
   @override

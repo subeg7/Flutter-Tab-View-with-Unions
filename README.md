@@ -1,16 +1,9 @@
-# tabs_with_freezed
+# Flutter Tab-View with Unions
 
-A new Flutter project.
+This is a flutter project to show an alternate to writing long if statements.
 
-## Getting Started
+## Medium Blog
 
-This project is a starting point for a Flutter application.
+Article on medium about this project
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Make long IF statements beautiful with Freezed in Flutter.](https://flutter.dev/docs/get-started/codelab)

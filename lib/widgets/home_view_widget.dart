@@ -27,7 +27,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tabs With Freezed'),
+        title: const Text('Tabs View'),
       ),
       body: Column(
         children: [
@@ -45,16 +45,16 @@ class _HomeViewState extends State<HomeView> {
 
   Widget _buildBody(TabViewModel activeHomeModel) {
     return activeHomeModel.when(
-      utensil: (_) => const UtensilWidget(),
-      vehicle: (_) => const VehicleWidget(),
-      cricket: (_) => const CricketWidget(),
-      alchohol: (_) => const AlcoholWidget(),
-      suit: (_) => const SuitWidget(),
-      court: (_) => const CourtWidget(),
-      mountain: (_) => const MountainWidget(),
       flower: (_) => const FlowerWidget(),
       animal: (_) => const AnimalWidget(),
+      mountain: (_) => const MountainWidget(),
       sky: (_) => const SkyWidget(),
+      vehicle: (_) => const VehicleWidget(),
+      utensil: (_) => const UtensilWidget(),
+      alchohol: (_) => const AlcoholWidget(),
+      cricket: (_) => const CricketWidget(),
+      suit: (_) => const SuitWidget(),
+      court: (_) => const CourtWidget(),
     );
   }
 }
